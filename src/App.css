@@ -1,0 +1,148 @@
+* {
+  color: whitesmoke;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: radial-gradient(
+      ellipse at bottom left,
+      rgba(0, 163, 203, 1) 40%,
+      rgba(0, 163, 203, 0) 40%
+    ),
+    radial-gradient(
+      ellipse at top right,
+      rgba(0, 163, 203, 1) 30%,
+      rgba(0, 163, 203, 0) 30%
+    ),
+    linear-gradient(
+      to right,
+      rgba(98, 87, 147, 1) 0%,
+      rgba(98, 87, 147, 1) 33%,
+      rgba(213, 93, 100, 1) 33%,
+      rgba(213, 93, 100, 1) 66%,
+      rgba(228, 145, 41, 1) 66%
+    );
+}
+.headshot {
+  height: 400px;
+  width: 340px;
+  border-radius: 50%;
+  border: 1px solid transparentize(white, 0.5);
+}
+
+.Parallax {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.cta {
+  text-align: left;
+  justify-content: center;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15%;
+  padding: 15px;
+  background-color: transparent;
+  backdrop-filter: blur(30px);
+  width: 50%;
+}
+
+.text {
+  align-items: center;
+  margin: 10px 0;
+  font-size: 100px;
+  color: white;
+}
+
+.text-project {
+  align-items: center;
+  margin: 10px 0;
+  font-size: 60px;
+  color: White;
+}
+
+.project-card-left {
+  display: flex;
+  float: left;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  width: 500px;
+  margin-right: 70%;
+  margin-left: 10%;
+  backdrop-filter: blur(30px);
+  transform: rotate(-15deg);
+  perspective: 1000px;
+}
+
+.project-card-left:hover .info {
+  transform: rotateY(180deg);
+}
+
+.info {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.info-front,
+.info-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.project-card-right {
+  display: flex;
+  float: right;
+  align-items: right;
+  flex-direction: row;
+  justify-content: right;
+  background-color: transparent;
+  width: 500px;
+  margin-left: 70%;
+  margin-right: 10%;
+  backdrop-filter: blur(30px);
+  transform: rotate(15deg);
+}
+
+.project-img {
+  height: 200px;
+  width: 200px;
+}
+
+.projectTitle {
+  justify-content: space-around;
+  align-items: center;
+  margin: 10%;
+  font-size: 90px;
+  color: white;
+  width: fit-content;
+}
+div {
+  width: 100%;
+}

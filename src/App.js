@@ -1,16 +1,45 @@
-import "./App.scss";
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import { Link } from "react-router-dom";
+import Projects from "./Projects";
 
-function App() {
-  return (
-    <div>
-      <div className="card">
-        <div className="welcome">Welcome to</div>
-        <div className="year">
-          <span>Ann Marecki's Portfolio Is In Progress!</span>
+export default function App() {
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const HomeContent = () => (
+    <>
+      <div className="content-heading">
+        <img className="headshot" src={require("./ania.png")}></img>
+        <div className="cta">
+          <p>Hi! I'm</p>
+          <h1 className="text">Ann Marecki</h1>
+          <p>Full stack developer based in New York City</p>
         </div>
       </div>
-    </div>
+    </>
+  );
+
+  // IoShapesOutline;
+  // GiMoebiusTriangle;
+  return (
+    <section className="Parallax">
+      <div
+        className="Parallax__background"
+        style={{ transform: `translateY(-${offsetY * 0.5}px)` }}
+      />
+      {/* <div
+        className="Parallax__content__heading"
+        style={{ transform: `translateY(${offsetY * 0.5}px)` }}
+      /> */}
+      <div className="content">{HomeContent()}</div>
+      <Projects />
+    </section>
   );
 }
-
-export default App;

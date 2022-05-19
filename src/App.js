@@ -34,12 +34,10 @@ export default function App() {
         className="Parallax__background"
         style={{ transform: `translateY(-${offsetY * 0.5}px)` }}
       />
-      {/* <div
-        className="Parallax__content__heading"
-        style={{ transform: `translateY(${offsetY * 0.5}px)` }}
-      /> */}
-      <div className="content">{HomeContent()}</div>
-      <Projects />
+      <div className="content">
+        {HomeContent()}
+        <Projects />
+      </div>
     </section>
   );
 }

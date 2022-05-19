@@ -2,16 +2,15 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 
-const ProjectTitle = () => <h1 className="projectTitle">Projects</h1>;
-
-const Project = () => {
+export default function Projects() {
   const [flip, setFlip] = useState(false);
   const [flip1, setFlip1] = useState(false);
   const [flip2, setFlip2] = useState(false);
 
   return (
-    <>
-      <div className="content">
+    <div>
+      <h1 className="projectTitle">Projects</h1>
+      <div className="projects">
         <div className={`card-left ${flip ? "flip" : ""}`}>
           <div className="front" onClick={() => setFlip(!flip)}>
             <img
@@ -77,15 +76,6 @@ const Project = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-};
-
-export default function Projects() {
-  return (
-    <div className="content">
-      <div>{ProjectTitle()}</div>
-      <div>{Project()}</div>
     </div>
   );
 }

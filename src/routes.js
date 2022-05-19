@@ -7,23 +7,20 @@ import {
   Switch,
 } from "react-router-dom";
 import AboutMe from "./components/AboutMe";
-import App from "./components/App";
+import Home from "./components/Home";
+import NavBar from "./components/NavBar";
 
-const pageRoutes = () => {
+const PageRoutes = () => {
   return (
     <Router>
-      <nav>
-        <Link to="/aboutme">About Me</Link>
-        <Link to="/">Home</Link>
-        <Link to="/projects">Projects</Link>
-      </nav>
+      <NavBar />
       <Routes>
-        <Route path="/" component={App} />
-        <Route path="/aboutme" component={AboutMe} />
-        <Route path="/projects" component={Projects} />
+        <Route path="/" element={<Home />} exact />
+        <Route path="/aboutme" element={<AboutMe />} exact />
+        <Route path="/projects" element={<Projects />} exact />
       </Routes>
     </Router>
   );
 };
 
-export default pageRoutes;
+export default PageRoutes;

@@ -8,14 +8,41 @@ import {
 } from "react-router-dom";
 import AboutMe from "./AboutMe";
 import Home from "./Home";
+import { useState } from "react";
+import { MdClose } from "react-icons/md";
+import { FiMenu } from "react-icons/fi";
 
 export default function NavBar() {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+  const handleToggle = () => {
+    setNavbarOpen(!navbarOpen);
+  };
+  const closeMenu = () => {
+    setNavbarOpen(false);
+  };
   return (
     <>
       <nav className="navBar">
-        <Link to="/aboutme">About Me</Link>
-        <Link to="/">Home</Link>
-        <Link to="/projects">Projects</Link>
+        <button onClick={handleToggle}>
+          {navbarOpen ? (
+            <MdClose
+              style={{ color: "white", width: "40px", height: "40px" }}
+            />
+          ) : (
+            <FiMenu style={{ color: "white", width: "40px", height: "40px" }} />
+          )}
+        </button>
+        <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
+          <Link to="/aboutme" onClick={() => closeMenu()}>
+            About Me
+          </Link>
+          <Link to="/" onClick={() => closeMenu()}>
+            Home
+          </Link>
+          <Link to="/projects" onClick={() => closeMenu()}>
+            Projects
+          </Link>
+        </ul>
       </nav>
     </>
   );

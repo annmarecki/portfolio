@@ -2,6 +2,7 @@
   color: whitesmoke;
   padding: 0;
   margin: 0;
+  min-height: 100%;
 }
 
 body {
@@ -26,7 +27,6 @@ body {
       rgba(228, 145, 41, 1) 66%
     );
   background-repeat: no-repeat;
-  background-size: contain;
   background-color: black;
 }
 .headshot {
@@ -40,13 +40,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
 }
 
-content {
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
+  width: 100%;
 }
 
 .cta {
@@ -86,7 +87,6 @@ content {
 .card-left {
   display: flex;
   flex-wrap: wrap;
-  float: left;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -108,8 +108,7 @@ content {
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
 }
 
-.card-left.flip,
-.card-left.flip2 {
+.card-left.flip {
   --rotate-y: 180deg;
 }
 
@@ -131,9 +130,54 @@ content {
 .card-left .back {
   transform: rotateY(180deg);
 }
+.card-left1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  background-color: purple;
+  width: 30rem;
+  margin-left: 10%;
+  margin-right: 70%;
+  transform-style: preserve-3d;
+  transition: 150ms;
+  cursor: pointer;
+  transform: perspective(1000px) rotateY(var(--rotate-y, 0))
+    translateY(var(--translate-y, 0));
+}
+
+.card-left1:hover {
+  --translate-y: -2px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.card-left1.flip2 {
+  --rotate-y: 180deg;
+}
+
+.card-left1 .front {
+  left: 0;
+}
+
+.card-left1 .front,
+.card-left1 .back {
+  border-radius: 0.25rem;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  background-color: purple;
+  backdrop-filter: opacity(10%);
+  position: absolute;
+  padding: 1rem;
+  backface-visibility: hidden;
+}
+
+.card-left1 .back {
+  transform: rotateY(180deg);
+}
 .card-right {
   display: flex;
-  float: right;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -149,6 +193,7 @@ content {
   cursor: pointer;
   transform: perspective(1000px) rotateY(var(--rotate-y, 0))
     translateY(var(--translate-y, 0));
+  z-index: 1;
 }
 
 .card-right:hover {
@@ -194,4 +239,6 @@ content {
 }
 div {
   width: 100%;
+  height: 100%;
+  white-space: normal;
 }

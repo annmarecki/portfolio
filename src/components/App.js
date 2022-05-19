@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+import "../App.css";
 import { Link } from "react-router-dom";
 import Projects from "./Projects";
 
@@ -16,7 +16,7 @@ export default function App() {
   const HomeContent = () => (
     <>
       <div className="content-heading">
-        <img className="headshot" src={require("./ania.png")}></img>
+        <img className="headshot" src={require("../images/ania.png")}></img>
         <div className="cta">
           <p>Hi! I'm</p>
           <h1 className="text">Ann Marecki</h1>
@@ -30,14 +30,7 @@ export default function App() {
   // GiMoebiusTriangle;
   return (
     <section className="Parallax">
-      <div
-        className="Parallax__background"
-        style={{ transform: `translateY(-${offsetY * 0.5}px)` }}
-      />
-      <div className="content">
-        {HomeContent()}
-        <Projects />
-      </div>
+      <div className="content">{HomeContent()}</div>
     </section>
   );
 }

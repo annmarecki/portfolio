@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./App.css";
+import "../App.css";
 
 const ProjectTitle = () => <h1 className="projectTitle">Projects</h1>;
 
@@ -16,7 +16,7 @@ const Project = () => {
           <div className="front" onClick={() => setFlip(!flip)}>
             <img
               className="project-img"
-              src={require("./thyme_logo.png")}
+              src={require("../images/thyme_logo.png")}
             ></img>
           </div>
           <div className="back" onClick={() => setFlip(!flip)}>
@@ -33,13 +33,12 @@ const Project = () => {
             </p>
           </div>
         </div>
-      </div>
-      <div>
+
         <div className={`card-right ${flip1 ? "flip1" : ""}`}>
           <div className="front" onClick={() => setFlip1(!flip1)}>
             <img
               className="project-img"
-              src={require("./thyme_logo.png")}
+              src={require("../images/thyme_logo.png")}
             ></img>
           </div>
           <div className="back" onClick={() => setFlip1(!flip1)}>
@@ -56,13 +55,11 @@ const Project = () => {
             </p>
           </div>
         </div>
-      </div>
-      <div>
-        <div className={`card-left ${flip2 ? "flip2" : ""}`}>
+        <div className={`card-left1 ${flip2 ? "flip2" : ""}`}>
           <div className="front" onClick={() => setFlip2(!flip2)}>
             <img
               className="project-img"
-              src={require("./thyme_logo.png")}
+              src={require("../images/thyme_logo.png")}
             ></img>
           </div>
           <div className="back" onClick={() => setFlip2(!flip2)}>
@@ -86,9 +83,9 @@ const Project = () => {
 
 export default function Projects() {
   return (
-    <div>
-      <div className="content">{ProjectTitle()}</div>
-      <div className="content">{Project()}</div>;
+    <div className="content">
+      <div>{ProjectTitle()}</div>
+      <div>{Project()}</div>
     </div>
   );
 }

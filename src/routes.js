@@ -9,6 +9,7 @@ import {
 import AboutMe from "./components/AboutMe";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
+import Contact from "./components/Contact";
 
 const PageRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const PageRoutes = () => {
         <Route path="/" element={<Home />} exact />
         <Route path="/aboutme" element={<AboutMe />} exact />
         <Route path="/projects" element={<Projects />} exact />
+        <Route path="/contact" element={<Contact />} exact />
       </Routes>
     </Router>
   );

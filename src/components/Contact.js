@@ -9,7 +9,7 @@ export default function Contact() {
     e.preventDefault();
 
     emailjs
-      .sendForm("gmail", YOUR_TEMPLATE_ID, form.current, YOUR_PUBLIC_KEY)
+      .sendForm("gmail", "template_7r0xwpw", e.target, "7dCsAEAE6223LCKHA")
       .then(
         (result) => {
           console.log(result.text);
@@ -18,6 +18,7 @@ export default function Contact() {
           console.log(error.text);
         }
       );
+    e.target.reset();
   };
 
   return (
@@ -26,13 +27,13 @@ export default function Contact() {
         <label>Name</label>
       </div>
       <div>
-        <input type="text" name="user_name" placeholder="Your Name" />
+        <input type="text" name="Name" placeholder="Your Name" />
       </div>
       <div>
         <label>Email</label>
       </div>
       <div>
-        <input type="email" name="user_email" placeholder="Your Email" />
+        <input type="email" name="reply_email" placeholder="Your Email" />
       </div>
       <div>
         <label>Subject</label>
@@ -44,7 +45,7 @@ export default function Contact() {
         <label>Message</label>
       </div>
       <div>
-        <textarea name="message" placeholder="Your Message" />
+        <textarea name="Message" placeholder="Your Message" />
       </div>
       <div>
         <input className="footer-button" type="submit" value="Send" />

@@ -33,15 +33,18 @@ export default function NavBar() {
           )}
         </button>
         <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
-          <Link to="/aboutme" onClick={() => closeMenu()}>
-            About Me
-          </Link>
           <Link to="/" onClick={() => closeMenu()}>
             Home
           </Link>
           <Link to="/projects" onClick={() => closeMenu()}>
             Projects
           </Link>
+          <Link to="/aboutme" onClick={() => closeMenu()}>
+            About Me
+          </Link>
+          {/* <Link to="/contact" onClick={() => closeMenu()}>
+            Contact Me
+          </Link> */}
         </ul>
       </nav>
     </>

@@ -7,7 +7,7 @@ import {
   AiOutlineCopyrightCircle,
 } from "react-icons/ai";
 
-export default function App() {
+export default function Footer() {
   // IoShapesOutline;
   // GiMoebiusTriangle;
   return (
@@ -20,15 +20,23 @@ export default function App() {
         </div>
         <div className="footer-part">
           <Popup
-            trigger={<button> Contact Me </button>}
-            position="right center"
+            trigger={<button className="button"> Contact Me </button>}
+            modal
+            nested
           >
-            <div className="popup">
-              <Contact />
-            </div>
+            {(close) => (
+              <div className="modal">
+                <button className="close" onClick={close}>
+                  &times;
+                </button>
+                <div className="header"> Send Me An Email </div>
+                <div className="message">
+                  <Contact />
+                </div>
+              </div>
+            )}
           </Popup>
         </div>
-
         <a href="https://www.linkedin.com/in/annmarecki/">
           {" "}
           <AiFillLinkedin style={{ margin: ".4rem" }} />

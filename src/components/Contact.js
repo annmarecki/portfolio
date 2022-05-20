@@ -28,12 +28,17 @@ export default function Contact() {
       <div>
         <input type="text" name="user_name" placeholder="Your Name" />
       </div>
-
       <div>
         <label>Email</label>
       </div>
       <div>
         <input type="email" name="user_email" placeholder="Your Email" />
+      </div>
+      <div>
+        <label>Subject</label>
+      </div>
+      <div>
+        <input type="text" name="subject" placeholder="Subject" />
       </div>
       <div>
         <label>Message</label>

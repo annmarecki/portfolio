@@ -1,5 +1,4 @@
 * {
-  color: white;
 }
 
 body {
@@ -7,6 +6,7 @@ body {
   background-color: rgba(0, 0, 0);
   font-family: Arial, Helvetica, sans-serif;
   min-width: 100%;
+  color: white;
 }
 
 .content {
@@ -47,7 +47,7 @@ body {
 .modal > .message {
   width: 100%;
   padding: 10px 5px;
-  color: black;
+  color: white;
 }
 .modal > .actions {
   width: 100%;
@@ -74,6 +74,7 @@ textarea {
   height: 15rem;
   max-width: 40rem;
   max-height: 20rem;
+  color: grey;
 }
 
 .popup-content {
@@ -114,7 +115,7 @@ textarea {
 .footer-button {
   background-color: transparent;
   border: none;
-  align-items: center;
+  color: white;
 }
 
 button {
@@ -243,6 +244,7 @@ a {
   padding: 10px 40px;
   text-decoration: none;
   font-weight: bold;
+  color: white;
 }
 
 .menuNav li:first-child {

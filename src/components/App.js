@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Projects from "./Projects";
 import PageRoutes from "../routes";
 import Home from "./Home";
+import Footer from "./Footer";
 
 export default function App() {
   // IoShapesOutline;
@@ -11,6 +12,7 @@ export default function App() {
   return (
     <>
       <PageRoutes />
+      <Footer />
     </>
   );
 }

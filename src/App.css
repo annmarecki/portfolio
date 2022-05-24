@@ -97,6 +97,7 @@ textarea {
 
 .footer {
   display: flex;
+  color: rgb(210, 208, 208);
   position: sticky;
   bottom: 0;
   background-color: black;
@@ -122,7 +123,7 @@ textarea {
 .footer-button {
   background-color: transparent;
   border: none;
-  color: white;
+  color: rgb(210, 208, 208);
 }
 
 button {
@@ -398,13 +399,40 @@ div {
   margin: 3rem 3rem 0.5rem 10rem;
 }
 .aboutmecontent {
-  border: solid;
-  color: rgb(210, 208, 208);
-  border-color: rgb(167, 165, 165);
+  color: white;
+  border-radius: 10px;
+  background-image: radial-gradient(
+      ellipse at bottom left,
+      rgba(0, 163, 203, 1) 30%,
+      rgba(0, 163, 203, 0) 30%
+    ),
+    radial-gradient(
+      ellipse at top right,
+      rgba(0, 163, 203, 1) 30%,
+      rgba(0, 163, 203, 0) 30%
+    ),
+    linear-gradient(
+      to right,
+      rgba(98, 87, 147, 1) 0%,
+      rgba(98, 87, 147, 1) 33%,
+      rgba(213, 93, 100, 1) 33%,
+      rgba(213, 93, 100, 1) 66%,
+      rgba(228, 145, 41, 1) 66%
+    );
   padding: 2.5rem 4rem 2.5rem 4rem;
   max-width: 40vw;
   margin-right: 2.5rem;
   text-align: justify;
+}
+.aboutmephotodiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 25vw;
+  height: 55vh;
+  padding: 3rem;
+  border-radius: 10px;
 }
 .aboutmephoto {
   display: flex;
@@ -413,24 +441,19 @@ div {
   align-items: center;
   width: 25vw;
   height: 55vh;
-  border: solid;
-  padding: 3rem;
-  border-color: rgb(167, 165, 165);
+  border-radius: 10px;
 }
 
 .contentborder {
   padding: 3rem 6rem 2rem 2rem;
-  border: solid;
-  border-color: rgba(213, 93, 100, 1);
-}
-
-.aboutmep {
-  color: rgb(167, 165, 165);
+  border-radius: 10px;
+  background-color: rgba(213, 93, 100, 0.57);
+  backdrop-filter: blur(30px);
 }
 
 .name {
   margin: 10px 0;
   font-size: 70px;
-  color: rgb(210, 208, 208);
+
   font-family: "Raleway", sans-serif;
 }

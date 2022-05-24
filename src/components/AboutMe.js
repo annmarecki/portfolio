@@ -24,7 +24,7 @@ export default function AboutMe() {
           <p>Curiousity • Ingenuity • Work Ethic • Teamwork • Leadership</p>
         </div>
       </div>
-      <div>
+      <div className="aboutmephotodiv">
         <img
           className="aboutmephoto"
           src={require("../images/rooseveltIsland.jpeg")}

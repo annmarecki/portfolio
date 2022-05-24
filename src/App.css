@@ -32,6 +32,7 @@ a {
   text-decoration: none;
   font-weight: bold;
   color: white;
+  font-family: "Raleway", sans-serif;
 }
 
 button:hover,
@@ -117,6 +118,7 @@ textarea {
 }
 
 /* Homepage */
+
 .content {
   display: flex;
   flex-direction: column;
@@ -175,7 +177,7 @@ textarea {
 .text {
   align-items: center;
   margin: 10px 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 100px;
   color: white;
 }

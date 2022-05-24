@@ -1,3 +1,4 @@
+/* General Styling */
 body {
   background-color: rgba(0, 0, 0);
   font-family: "Lusitana", sans-serif;
@@ -8,71 +9,35 @@ body {
   min-height: 100%;
 }
 
+div {
+  width: 100%;
+  height: 100%;
+}
+
 h2 {
   font-family: "Raleway", sans-serif;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-grow: 1;
-  background-image: radial-gradient(
-      ellipse at bottom left,
-      black 40%,
-      rgba(0, 163, 203, 0) 10%
-    ),
-    radial-gradient(
-      ellipse at top right,
-      rgba(0, 163, 203, 1) 30%,
-      rgba(0, 163, 203, 0) 30%
-    ),
-    linear-gradient(
-      to right,
-      rgba(98, 87, 147, 1) 0%,
-      rgba(98, 87, 147, 1) 33%,
-      rgba(213, 93, 100, 1) 33%,
-      rgba(213, 93, 100, 1) 66%,
-      rgba(228, 145, 41, 1) 66%
-    );
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%;
-}
-.modal {
-  font-size: 15px;
-}
-.modal > .header {
-  width: 100%;
-  border-bottom: 1px solid white;
-  font-size: 25px;
-  text-align: center;
-  padding: 5px;
-}
-.modal > .message {
-  width: 100%;
-  padding: 10px 5px;
-  color: white;
-}
-.modal > .actions {
-  width: 100%;
-  padding: 10px 5px;
-  margin: auto;
-  text-align: center;
-}
-.modal > .close {
-  cursor: pointer;
-  position: absolute;
-  display: block;
-  padding: 2px 5px;
-  line-height: 20px;
-  right: -10px;
-  top: -10px;
-  font-size: 30px;
-  background: transparent;
-  border-radius: 18px;
-  color: white;
+button {
+  background-color: transparent;
+  backdrop-filter: blur(30px);
+  color: rgb(156, 227, 245);
   border: none;
+}
+
+a {
+  display: block;
+  padding: 10px 40px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+button:hover,
+a:hover,
+.footer-button:hover {
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 textarea {
@@ -82,18 +47,46 @@ textarea {
   max-height: 20rem;
 }
 
-.popup-content {
-  display: flex;
-  position: sticky;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  background-color: rgb(156, 227, 245, 0.5);
-  backdrop-filter: blur(30px);
-  width: fit-content;
-  height: fit-content;
-  padding: 2rem;
+/* Navigation */
+navBar {
+  position: relative;
+  border: none;
 }
+
+.navBar button {
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  right: 40px;
+  top: 40px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.menuNav {
+  overflow-y: scroll;
+  background-color: transparent;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+  max-width: 290px;
+  z-index: 9;
+  background-color: transparent;
+  backdrop-filter: blur(30px);
+}
+
+.menuNav.showMenu {
+  width: 100%;
+}
+
+.menuNav li:first-child {
+  margin-top: 7rem;
+}
+
+/* footer */
 
 .footer {
   display: flex;
@@ -126,19 +119,35 @@ textarea {
   color: rgb(210, 208, 208);
 }
 
-button {
-  background-color: transparent;
-  backdrop-filter: blur(30px);
-  color: rgb(156, 227, 245);
-  border: none;
+/* Homepage */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  background-image: radial-gradient(
+      ellipse at bottom left,
+      black 40%,
+      rgba(0, 163, 203, 0) 10%
+    ),
+    radial-gradient(
+      ellipse at top right,
+      rgba(0, 163, 203, 1) 30%,
+      rgba(0, 163, 203, 0) 30%
+    ),
+    linear-gradient(
+      to right,
+      rgba(98, 87, 147, 1) 0%,
+      rgba(98, 87, 147, 1) 33%,
+      rgba(213, 93, 100, 1) 33%,
+      rgba(213, 93, 100, 1) 66%,
+      rgba(228, 145, 41, 1) 66%
+    );
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
-button:hover,
-a:hover,
-.footer-button:hover {
-  font-size: 1rem;
-  cursor: pointer;
-}
 .headshot {
   height: 400px;
   width: 340px;
@@ -181,57 +190,58 @@ a:hover,
   color: White;
 }
 
-.navBar {
-  position: relative;
-  background: transparent;
-  border: none;
-}
+/* contact me pop up */
 
-.navBar button {
-  background-color: transparent;
-  border: none;
-  position: fixed;
-  right: 40px;
-  top: 40px;
-  z-index: 10;
-  cursor: pointer;
+.modal {
+  font-size: 15px;
 }
-
-.menuNav {
-  overflow-y: scroll;
-  background-color: transparent;
-  list-style: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 0;
-  overflow: hidden;
-  max-width: 290px;
-  z-index: 9;
-  background-color: transparent;
-  backdrop-filter: blur(30px);
-}
-
-.menuNav.showMenu {
+.modal > .header {
   width: 100%;
+  border-bottom: 1px solid white;
+  font-size: 25px;
+  text-align: center;
+  padding: 5px;
 }
-
-a {
-  display: block;
-  padding: 10px 40px;
-  text-decoration: none;
-  font-weight: bold;
+.modal > .message {
+  width: 100%;
+  padding: 10px 5px;
   color: white;
 }
-
-.menuNav li:first-child {
-  margin-top: 7rem;
-}
-
-div {
+.modal > .actions {
   width: 100%;
-  height: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
 }
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 30px;
+  background: transparent;
+  border-radius: 18px;
+  color: white;
+  border: none;
+}
+
+.popup-content {
+  display: flex;
+  position: sticky;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: rgb(156, 227, 245, 0.5);
+  backdrop-filter: blur(30px);
+  width: fit-content;
+  height: fit-content;
+  padding: 2rem;
+}
+
+/* about me */
 
 .aboutme {
   display: flex;
@@ -241,6 +251,7 @@ div {
   width: 80vw;
   margin: 3rem 3rem 0.5rem 10rem;
 }
+
 .aboutmecontent {
   color: black;
   border-radius: 10px;
@@ -267,6 +278,7 @@ div {
   margin-right: 2.5rem;
   text-align: justify;
 }
+
 .aboutmephotodiv {
   display: flex;
   flex-wrap: wrap;
@@ -277,6 +289,7 @@ div {
   padding: 3rem;
   border-radius: 10px;
 }
+
 .aboutmephoto {
   display: flex;
   flex-wrap: wrap;
@@ -297,6 +310,50 @@ div {
 .name {
   margin: 10px 0;
   font-size: 70px;
-
   font-family: "Raleway", sans-serif;
+}
+
+/* projects */
+
+.projectsPage {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  margin: 3rem;
+}
+.projectsPageTitle {
+  margin: 10px 0;
+  font-size: 70px;
+  font-family: "Raleway", sans-serif;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+.card {
+  border: solid;
+  border-color: white;
+  border-radius: 10px;
+  color: white;
+  padding: 2.5rem;
+  width: 15vw;
+  height: 30vh;
+  margin-right: 3rem;
+}
+
+.image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 25vw;
+  height: 55vh;
+  border-radius: 10px;
 }

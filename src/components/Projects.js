@@ -19,11 +19,10 @@ export default function Projects() {
             return (
               <div key={index} className="card">
                 <h1>{project.title}</h1>
-                <div className="image">
-                  {/* <img className="project-img" src={require(project.img)}></img> */}
-                </div>
-                <div>
-                  <h1 className="text-project"></h1>
+                {/* <div className="image">
+                  {/* <img className="project-img" src={require(project.img)}></img>
+                </div> */}
+                <div className="projecttext">
                   <p>{project.content}</p>
                 </div>
               </div>

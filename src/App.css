@@ -181,39 +181,6 @@ a:hover,
   color: White;
 }
 
-.card-left {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  border-radius: 0.25rem;
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
-  background-color: purple;
-  width: 30rem;
-  height: 20rem;
-  margin-left: 10%;
-  margin-right: 60%;
-  transform-style: preserve-3d;
-  transition: 150ms;
-  cursor: pointer;
-  transform: perspective(1000px) rotateY(var(--rotate-y, 0))
-    translateY(var(--translate-y, 0));
-}
-
-.card-left:hover {
-  --translate-y: -2px;
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
-}
-
-.card-left.flip {
-  --rotate-y: 180deg;
-}
-
-.card-left .front {
-  left: 0;
-}
-
 .navBar {
   position: relative;
   background: transparent;
@@ -261,130 +228,6 @@ a {
   margin-top: 7rem;
 }
 
-.card-left .front,
-.card-left .back {
-  border-radius: 0.25rem;
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
-  background-color: purple;
-  position: absolute;
-  padding: 1rem;
-  backface-visibility: hidden;
-  overflow-y: auto;
-}
-
-.card-left .back {
-  transform: rotateY(180deg);
-}
-.card-left1 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  border-radius: 0.25rem;
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
-  background-color: purple;
-  width: 30rem;
-  height: 20rem;
-  margin-left: 10%;
-  margin-right: 60%;
-  transform-style: preserve-3d;
-  transition: 150ms;
-  cursor: pointer;
-  transform: perspective(1000px) rotateY(var(--rotate-y, 0))
-    translateY(var(--translate-y, 0));
-}
-
-.card-left1:hover {
-  --translate-y: -2px;
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
-}
-
-.card-left1.flip2 {
-  --rotate-y: 180deg;
-}
-
-.card-left1 .front {
-  left: 0;
-}
-
-.card-left1 .front,
-.card-left1 .back {
-  border-radius: 0.25rem;
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
-  background-color: purple;
-  backdrop-filter: opacity(10%);
-  position: absolute;
-  padding: 1rem;
-  backface-visibility: hidden;
-  overflow: auto;
-}
-
-.card-left1 .back {
-  transform: rotateY(180deg);
-}
-.card-right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  border-radius: 0.25rem;
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
-  background-color: purple;
-  width: 30rem;
-  height: 20rem;
-  margin: 1rem;
-  margin-left: 60%;
-  margin-right: 20%;
-  transform-style: preserve-3d;
-  transition: 150ms;
-  cursor: pointer;
-  transform: perspective(1000px) rotateY(var(--rotate-y, 0))
-    translateY(var(--translate-y, 0));
-  z-index: 1;
-}
-
-.card-right:hover {
-  --translate-y: -2px;
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
-}
-
-.card-right.flip1 {
-  --rotate-y: 180deg;
-}
-
-.card-right .front {
-  left: 0;
-}
-
-.card-right .front,
-.card-right .back {
-  border-radius: 0.25rem;
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
-  background-color: purple;
-  backdrop-filter: opacity(10%);
-  position: absolute;
-  padding: 1rem;
-  backface-visibility: hidden;
-  overflow: auto;
-}
-
-.card-right .back {
-  transform: rotateY(180deg);
-}
-
-.project-img {
-  height: 30vh;
-  width: 30vw;
-}
-
-.projectTitle {
-  justify-content: center;
-  align-items: center;
-  font-family: "Raleway", sans-serif;
-  font-size: 90px;
-  color: white;
-}
 div {
   width: 100%;
   height: 100%;
@@ -399,7 +242,7 @@ div {
   margin: 3rem 3rem 0.5rem 10rem;
 }
 .aboutmecontent {
-  color: white;
+  color: black;
   border-radius: 10px;
   background-image: radial-gradient(
       ellipse at bottom left,
@@ -447,7 +290,7 @@ div {
 .contentborder {
   padding: 3rem 6rem 2rem 2rem;
   border-radius: 10px;
-  background-color: rgba(213, 93, 100, 0.57);
+  background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(30px);
 }
 

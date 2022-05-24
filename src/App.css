@@ -319,10 +319,24 @@ textarea {
   display: flex;
   color: white;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
   width: 100vw;
-  margin: 3rem;
+  height: 100vh;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin: 0rem 1rem 0rem 1rem;
+  background-image: linear-gradient(
+    to right,
+    rgba(98, 87, 147, 1) 0%,
+    rgba(98, 87, 147, 1) 33%,
+    rgba(213, 93, 100, 1) 33%,
+    rgba(213, 93, 100, 1) 66%,
+    rgba(228, 145, 41, 1) 66%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .projectsPageTitle {
   margin: 10px 0;
@@ -332,10 +346,11 @@ textarea {
 
 .projects {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  min-height: 70vh;
+  width: 80vw;
+  height: 70vh;
 }
 .card {
   border: solid;
@@ -348,6 +363,19 @@ textarea {
   margin-right: 3rem;
 }
 
+.card.active {
+  border: solid;
+  border-color: white;
+  border-radius: 10px;
+  color: white;
+  padding: 2.5rem;
+  width: 50vw;
+  height: 50vh;
+  margin: 3rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
 .image {
   display: flex;
   flex-wrap: wrap;
@@ -356,4 +384,11 @@ textarea {
   width: 25vw;
   height: 55vh;
   border-radius: 10px;
+}
+
+.accordianSymbol {
+  font-size: 10px;
+  position: relative;
+  bottom: 0px;
+  color: aqua;
 }

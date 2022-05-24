@@ -13,7 +13,7 @@ export const projectData = [
     status: "completed",
   },
   {
-    title: "The GreenHouse",
+    title: "The Green House",
     img: <GiMonsteraLeaf style={{ color: "green" }} />,
     content:
       "E-commerce website that helps shoppers discover more thant 100 indoor plants for the small-space Gardener.",

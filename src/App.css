@@ -14,7 +14,8 @@ div {
   height: 100%;
 }
 
-h2 {
+h2,
+h1 {
   font-family: "Raleway", sans-serif;
 }
 
@@ -48,13 +49,12 @@ textarea {
 }
 
 /* Navigation */
-navBar {
+.navBar {
   position: relative;
   border: none;
 }
 
 .navBar button {
-  background-color: transparent;
   border: none;
   position: fixed;
   right: 40px;
@@ -65,7 +65,6 @@ navBar {
 
 .menuNav {
   overflow-y: scroll;
-  background-color: transparent;
   list-style: none;
   position: fixed;
   top: 0;
@@ -74,8 +73,6 @@ navBar {
   overflow: hidden;
   max-width: 290px;
   z-index: 9;
-  background-color: transparent;
-  backdrop-filter: blur(30px);
 }
 
 .menuNav.showMenu {
@@ -310,6 +307,7 @@ navBar {
 .name {
   margin: 10px 0;
   font-size: 70px;
+  color: rgb(135, 120, 199);
   font-family: "Raleway", sans-serif;
 }
 

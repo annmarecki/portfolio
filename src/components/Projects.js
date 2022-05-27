@@ -17,15 +17,18 @@ export default function Projects() {
       <h1 className="projectPageTitle">Projects</h1>
       <div className="projects">
         {projects ? (
-          projects.map(({ title, content, github, youtube, status }) => (
-            <Accordian
-              title={title}
-              content={content}
-              github={github}
-              youtube={youtube}
-              status={status}
-            />
-          ))
+          projects.map(
+            ({ title, content, github, youtube, status, color, img }) => (
+              <Accordian
+                title={title}
+                content={content}
+                github={github}
+                youtube={youtube}
+                status={status}
+                color={color}
+              />
+            )
+          )
         ) : (
           <div>Loading...</div>
         )}

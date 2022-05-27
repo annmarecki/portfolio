@@ -37,7 +37,8 @@ a {
 
 button:hover,
 a:hover,
-.footer-button:hover {
+.footer-button:hover,
+.accordianSymbol:hover {
   font-size: 1rem;
   cursor: pointer;
 }
@@ -320,23 +321,12 @@ textarea {
   color: white;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  overflow-y: scroll;
   margin: 0rem 1rem 0rem 1rem;
-  background-image: linear-gradient(
-    to right,
-    rgba(98, 87, 147, 1) 0%,
-    rgba(98, 87, 147, 1) 33%,
-    rgba(213, 93, 100, 1) 33%,
-    rgba(213, 93, 100, 1) 66%,
-    rgba(228, 145, 41, 1) 66%
-  );
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 .projectsPageTitle {
   margin: 10px 0;
@@ -353,6 +343,9 @@ textarea {
   height: 70vh;
 }
 .card {
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(30px);
   border: solid;
   border-color: white;
   border-radius: 10px;
@@ -387,8 +380,16 @@ textarea {
 }
 
 .accordianSymbol {
-  font-size: 10px;
-  position: relative;
-  bottom: 0px;
-  color: aqua;
+  font-size: 12px;
+  text-align: end;
+}
+
+.projecttext {
+  justify-content: start;
+}
+
+.Link {
+  padding: 0;
+  font-size: 12px;
+  text-decoration: underline;
 }

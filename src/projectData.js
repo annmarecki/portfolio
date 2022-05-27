@@ -10,7 +10,7 @@ export const projectData = [
       "Android and iOS mobile app that allows users to scan their groceries into a virtual fridge and then to search for recipes based on those ingredients.",
     github: "https://github.com/capstoneTeamPudding/pudding",
     youtube: "https://www.youtube.com/watch?v=HmM-4zlFmo4",
-    status: "completed",
+    color: "#625693",
   },
   {
     title: "The Green House",
@@ -18,15 +18,14 @@ export const projectData = [
     content:
       "E-commerce website that helps shoppers discover more thant 100 indoor plants for the small-space Gardener.",
     github: "https://github.com/2111-pellow/2111-grace-shopper",
-    youtube: null,
-    status: "completed",
+    color: "#d55c64",
   },
   {
     title: "Your Yoga",
     img: <GrYoga style={{ color: "blue" }} />,
-    content: "Web app that teaches users the basics of yoga",
+    content:
+      "Web app that teaches users the basics of yoga. This project is currently in development!",
     github: "https://github.com/annmarecki/youryoga",
-    youtube: null,
-    status: "Currently in development",
+    color: "#e39128",
   },
 ];

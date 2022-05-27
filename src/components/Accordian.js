@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import { AiFillGithub, AiOutlineYoutube } from "react-icons/ai";
 
-const Accordion = ({ title, content, github, youtube, status, color, img }) => {
+const Accordion = ({ title, content, github, youtube, color, img }) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
@@ -12,9 +12,6 @@ const Accordion = ({ title, content, github, youtube, status, color, img }) => {
       style={{ backgroundColor: color }}
     >
       <h1>{title}</h1>
-      <div className="image">
-        <img className="project-img" src={img}></img>
-      </div>
       {isActive && (
         <div className="projecttext">
           <p>{content}</p>

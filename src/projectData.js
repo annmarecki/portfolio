@@ -14,7 +14,7 @@ export const projectData = [
   },
   {
     title: "The Green House",
-    img: <GiMonsteraLeaf style={{ color: "green" }} />,
+    icon: <GiMonsteraLeaf style={{ color: "green" }} />,
     content:
       "E-commerce website that helps shoppers discover more thant 100 indoor plants for the small-space Gardener.",
     github: "https://github.com/2111-pellow/2111-grace-shopper",
@@ -22,7 +22,7 @@ export const projectData = [
   },
   {
     title: "Your Yoga",
-    img: <GrYoga style={{ color: "blue" }} />,
+    icon: <GrYoga style={{ color: "blue" }} />,
     content:
       "Web app that teaches users the basics of yoga. This project is currently in development!",
     github: "https://github.com/annmarecki/youryoga",

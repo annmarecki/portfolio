@@ -26,6 +26,7 @@ export default function Projects() {
                 youtube={youtube}
                 status={status}
                 color={color}
+                img={img}
               />
             )
           )

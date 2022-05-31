@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ReactPlayer from "react-player";
 import { Link } from "react-router-dom";
 import "../App.css";
 import { AiFillGithub, AiOutlineYoutube } from "react-icons/ai";
@@ -10,8 +11,10 @@ const Accordion = ({ title, content, github, youtube, color, img }) => {
     <div
       className={`card ${isActive ? "active" : ""}`}
       style={{ backgroundColor: color }}
+      onClick={() => setIsActive(!isActive)}
     >
-      <h1>{title}</h1>
+      <h1 id="title">{title}</h1>
+      <p>{isActive ? "" : "Click to Learn More"}</p>
       {isActive && (
         <div className="projecttext">
           <p>{content}</p>
@@ -19,20 +22,17 @@ const Accordion = ({ title, content, github, youtube, color, img }) => {
           <a className="Link" href={github}>
             Github Repository
           </a>
-          {youtube ? (
-            <a className="Link" href={youtube}>
-              Youtube Video
-            </a>
-          ) : (
-            ""
-          )}
+
+          <div>
+            {"  "}
+            {youtube ? (
+              <ReactPlayer url={youtube} width="400" height="200" />
+            ) : (
+              ""
+            )}
+          </div>
         </div>
       )}
-      <div className="accordianSymbol">
-        <p onClick={() => setIsActive(!isActive)}>
-          {isActive ? "Minimize" : "Learn More"}
-        </p>
-      </div>
     </div>
   );
 };

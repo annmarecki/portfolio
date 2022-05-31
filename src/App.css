@@ -357,16 +357,18 @@ textarea {
 }
 
 .card.active {
+  display: flex;
   border: solid;
+  flex-direction: column;
   border-color: white;
   border-radius: 10px;
   color: white;
   padding: 2.5rem;
   width: 50vw;
-  height: 50vh;
+  height: 60vh;
   margin: 3rem;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  padding: 10px;
+  overflow-y: scroll;
 }
 
 .image {
@@ -379,9 +381,8 @@ textarea {
   border-radius: 10px;
 }
 
-.accordianSymbol {
-  font-size: 12px;
-  text-align: end;
+#title {
+  margin: 1px;
 }
 
 .projecttext {
@@ -389,7 +390,7 @@ textarea {
 }
 
 .Link {
-  padding: 0;
+  padding: 10px;
   font-size: 12px;
   text-decoration: underline;
 }

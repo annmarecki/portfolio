@@ -295,7 +295,7 @@ textarea {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 25vw;
+  width: 23vw;
   height: 55vh;
   border-radius: 10px;
 }
@@ -310,7 +310,7 @@ textarea {
 .name {
   margin: 10px 0;
   font-size: 70px;
-  color: rgb(135, 120, 199);
+  color: black;
   font-family: "Raleway", sans-serif;
 }
 

@@ -9,7 +9,7 @@ const Accordion = ({ title, content, github, youtube, color, img }) => {
 
   return (
     <div
-      className={`card ${isActive ? "active" : ""}`}
+      className={`card${isActive ? "active" : ""}`}
       style={{ backgroundColor: color }}
       onClick={() => setIsActive(!isActive)}
     >

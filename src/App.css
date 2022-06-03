@@ -345,7 +345,6 @@ textarea {
 .card {
   display: flex;
   flex-direction: column;
-  backdrop-filter: blur(30px);
   border: solid;
   border-color: white;
   border-radius: 10px;
@@ -356,7 +355,7 @@ textarea {
   margin-right: 3rem;
 }
 
-.card.active {
+.cardactive {
   display: flex;
   border: solid;
   flex-direction: column;
